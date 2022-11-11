@@ -18,7 +18,6 @@ public class CarDaoImpl implements CarDao {
     private static final String UPDATE = "UPDATE car SET car_number=?, car_model_id=? WHERE id=?";
     private static final String DELETE = "DELETE FROM car WHERE id=?";
     private static final String FIND_BY_ID = "SELECT * FROM car WHERE id=?";
-    private static final String FIND_BY_CAR_NUMBER = "SELECT * FROM car WHERE car_number=?";
 
     @Autowired
     private JdbcTemplate jdbcTemplate;

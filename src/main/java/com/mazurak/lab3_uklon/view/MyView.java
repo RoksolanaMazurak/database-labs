@@ -163,6 +163,13 @@ public class MyView {
 
     private void selectAllTable() {
         findAllCars();
+        findAllCarModels();
+        findAllClients();
+        findAllClientCards();
+        findAllDrivers();
+        findAllPayments();
+        findAllRatings();
+        findAllReservations();
     }
 
     // region CAR ---------------------------------------------------

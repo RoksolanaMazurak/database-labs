@@ -176,7 +176,7 @@ public class MyView {
         Car car = new Car(null, carNumber.toUpperCase(), carModelId);
 
         int count = carController.create(car);
-        System.out.printf("Created %d rows\n", count);
+        System.out.printf("Created %d row(s)\n", count);
     }
 
     private void updateCar() {
@@ -190,7 +190,7 @@ public class MyView {
         Car car = new Car(null, carNumber, carModel);
 
         int count = carController.update(id, car);
-        System.out.printf("There are updated %d row(s)\n", count);
+        System.out.printf("Updated %d row(s)\n", count);
     }
 
     private void deleteFromCar() {
@@ -198,7 +198,7 @@ public class MyView {
         Integer id = valueOf((input.nextLine()));
 
         int count = carController.delete(id);
-        System.out.printf("There are deleted %d rows\n", count);
+        System.out.printf("Deleted %d row(s)\n", count);
     }
 
     private void findAllCars() {
@@ -221,8 +221,8 @@ public class MyView {
         System.out.println("Input 'car_number': ");
         String carNumber = input.nextLine();
 
-        Optional<Car> book = carController.findByCarNumber(carNumber);
-        System.out.println(book.orElse(nullCar));
+        Optional<Car> car = carController.findByCarNumber(carNumber);
+        System.out.println(car.orElse(nullCar));
     }
 
     // region CAR MODEL ---------------------------------------------------
@@ -239,7 +239,7 @@ public class MyView {
         CarModel carModel = new CarModel(null, carName, carCompany, carClass, seatNum);
 
         int count = carModelController.create(carModel);
-        System.out.printf("Created %d rows\n", count);
+        System.out.printf("Created %d row(s)\n", count);
     }
 
     private void updateCarModel() {
@@ -266,7 +266,7 @@ public class MyView {
         Integer id = valueOf((input.nextLine()));
 
         int count = carModelController.delete(id);
-        System.out.printf("There are deleted %d rows\n", count);
+        System.out.printf("Deleted %d row(s)\n", count);
     }
 
     private void findAllCarModels() {
@@ -305,7 +305,7 @@ public class MyView {
                 clientCity, clientStreet, clientCardId);
 
         int count = clientController.create(client);
-        System.out.printf("Created %d rows\n", count);
+        System.out.printf("Created %d row(s)\n", count);
     }
 
     private void updateClient() {
@@ -330,7 +330,7 @@ public class MyView {
                 clientCity, clientStreet, clientCardId);
 
         int count = clientController.update(id, client);
-        System.out.printf("There are updated %d row(s)\n", count);
+        System.out.printf("Updated %d row(s)\n", count);
     }
 
     private void deleteFromClient() {
@@ -338,11 +338,11 @@ public class MyView {
         Integer id = valueOf((input.nextLine()));
 
         int count = clientController.delete(id);
-        System.out.printf("There are deleted %d rows\n", count);
+        System.out.printf("Deleted %d row(s)\n", count);
     }
 
     private void findAllClients() {
-        System.out.println("\nTable: CAR");
+        System.out.println("\nTable: CLIENT");
         List<Client> clients = clientController.findAll();
         for (Client client : clients) {
             System.out.println(client);
@@ -365,7 +365,7 @@ public class MyView {
         ClientCard card = new ClientCard(null, clientCard);
 
         int count = clientCardController.create(card);
-        System.out.printf("Created %d rows\n", count);
+        System.out.printf("Created %d row(s)\n", count);
     }
 
     private void updateClientCard() {
@@ -378,7 +378,7 @@ public class MyView {
         ClientCard card = new ClientCard(null, clientCard);
 
         int count = clientCardController.update(id, card);
-        System.out.printf("There are updated %d row(s)\n", count);
+        System.out.printf("Updated %d row(s)\n", count);
     }
 
     private void deleteFromClientCard() {
@@ -386,7 +386,7 @@ public class MyView {
         Integer id = valueOf((input.nextLine()));
 
         int count = clientCardController.delete(id);
-        System.out.printf("There are deleted %d rows\n", count);
+        System.out.printf("Deleted %d row(s)\n", count);
     }
 
     private void findAllClientCards() {
@@ -420,7 +420,7 @@ public class MyView {
         Driver driver = new Driver(null, driverSurname, driverName, driverGender, driverRating, carId);
 
         int count = driverController.create(driver);
-        System.out.printf("Created %d rows\n", count);
+        System.out.printf("Created %d row(s)\n", count);
     }
 
     private void updateDriver() {
@@ -440,7 +440,7 @@ public class MyView {
         Driver driver = new Driver(null, driverSurname, driverName, driverGender, driverRating, carId);
 
         int count = driverController.update(id, driver);
-        System.out.printf("There are updated %d row(s)\n", count);
+        System.out.printf("Updated %d row(s)\n", count);
     }
 
     private void deleteFromDriver() {
@@ -448,7 +448,7 @@ public class MyView {
         Integer id = valueOf((input.nextLine()));
 
         int count = driverController.delete(id);
-        System.out.printf("There are deleted %d rows\n", count);
+        System.out.printf("Deleted %d row(s)\n", count);
     }
 
     private void findAllDrivers() {
@@ -480,7 +480,7 @@ public class MyView {
         Payment payment = new Payment(null, paymentType, paymentTime, paymentCard, transactionId);
 
         int count = paymentController.create(payment);
-        System.out.printf("Created %d rows\n", count);
+        System.out.printf("Created %d row(s)\n", count);
     }
 
     private void updatePayment() {
@@ -506,7 +506,7 @@ public class MyView {
         Integer id = valueOf((input.nextLine()));
 
         int count = paymentController.delete(id);
-        System.out.printf("Deleted %d rows\n", count);
+        System.out.printf("Deleted %d row(s)\n", count);
     }
 
     private void findAllPayments() {
@@ -535,7 +535,7 @@ public class MyView {
         Rating rating = new Rating(null, ratingValue, clientId);
 
         int count = ratingController.create(rating);
-        System.out.printf("Created %d rows\n", count);
+        System.out.printf("Created %d row(s)\n", count);
     }
 
     private void updateRating() {
@@ -550,7 +550,7 @@ public class MyView {
         Rating rating = new Rating(null, ratingValue, clientId);
 
         int count = ratingController.update(id,rating);
-        System.out.printf("There are updated %d row(s)\n", count);
+        System.out.printf("Updated %d row(s)\n", count);
     }
 
     private void deleteFromRating() {
@@ -558,7 +558,7 @@ public class MyView {
         Integer id = valueOf((input.nextLine()));
 
         int count = ratingController.delete(id);
-        System.out.printf("There are deleted %d rows\n", count);
+        System.out.printf("Deleted %d row(s)\n", count);
     }
 
     private void findAllRatings() {
@@ -595,7 +595,7 @@ public class MyView {
                 startAddress, finalAddress, reservationCar);
 
         int count = reservationController.create(reservation);
-        System.out.printf("Created %d rows\n", count);
+        System.out.printf("Created %d row(s)\n", count);
     }
 
     private void updateReservation() {
@@ -618,7 +618,7 @@ public class MyView {
                 startAddress, finalAddress, reservationCar);
 
         int count = reservationController.update(id, reservation);
-        System.out.printf("There are updated %d row(s)\n", count);
+        System.out.printf("Updated %d row(s)\n", count);
     }
 
     private void deleteFromReservation() {
@@ -626,7 +626,7 @@ public class MyView {
         Integer id = valueOf((input.nextLine()));
 
         int count = reservationController.delete(id);
-        System.out.printf("There are deleted %d rows\n", count);
+        System.out.printf("Deleted %d row(s)\n", count);
     }
 
     private void findAllReservations() {

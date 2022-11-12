@@ -39,9 +39,4 @@ public class CarControllerImpl implements CarController {
     public int delete(Integer id) {
         return carService.delete(id);
     }
-
-    @Override
-    public Optional<Car> findByCarNumber(String carNumber) {
-        return carService.findByCarNumber(carNumber);
-    }
 }

@@ -38,11 +38,5 @@ public class CarServiceImpl implements CarService {
     public int delete(Integer id) {
         return carDao.delete(id);
     }
-
-    @Override
-    public Optional<Car> findByCarNumber(String carNumber) {
-        return carDao.findByCarNumber(carNumber);
-    }
-
 }
 

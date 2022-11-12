@@ -56,7 +56,6 @@ public class MyView {
         menu.put("13", " 13 - Delete from Car");
         menu.put("14", " 14 - Find all Cars");
         menu.put("15", " 15 - Find Car by ID");
-        menu.put("16", " 16 - Find Car by car_number");
 
         menu.put("2", "  2 - Table: CarModel");
         menu.put("21", " 21 - Create Car Model");
@@ -117,7 +116,6 @@ public class MyView {
         methodsMenu.put("13", this::deleteFromCar);
         methodsMenu.put("14", this::findAllCars);
         methodsMenu.put("15", this::findCarById);
-        methodsMenu.put("16", this::findCarByCarNumber);
 
         methodsMenu.put("21", this::createCarModel);
         methodsMenu.put("22", this::updateCarModel);
@@ -214,14 +212,6 @@ public class MyView {
         Integer id = valueOf((input.nextLine()));
 
         Optional<Car> car = carController.findById(id);
-        System.out.println(car.orElse(nullCar));
-    }
-
-    private void findCarByCarNumber() {
-        System.out.println("Input 'car_number': ");
-        String carNumber = input.nextLine();
-
-        Optional<Car> car = carController.findByCarNumber(carNumber);
         System.out.println(car.orElse(nullCar));
     }
 

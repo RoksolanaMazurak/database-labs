@@ -53,18 +53,4 @@ public class CarDaoImpl implements CarDao {
     public int delete(Integer id) {
         return jdbcTemplate.update(DELETE, id);
     }
-
-    @Override
-    public Optional<Car> findByCarNumber(String carNumber) {
-        Optional<Car> car;
-        try {
-            car = Optional.ofNullable(jdbcTemplate.queryForObject(FIND_BY_CAR_NUMBER,
-                    BeanPropertyRowMapper.newInstance(Car.class), carNumber));
-        } catch (EmptyResultDataAccessException e) {
-            car = Optional.empty();
-        }
-        return car;
-    }
-
-
 }
